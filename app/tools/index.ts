@@ -18,6 +18,6 @@ export const newStudent = {
     date_birth: '',
     email: '',
     phone_number: '',
-    careerId: ''
+    careerId: NaN
 }
 

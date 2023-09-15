@@ -1,6 +1,6 @@
 'use client'
 import useSWR from 'swr'
-import { StudentModel } from '../../typos'
+import { StudentTypo } from '../../typos'
 import Image from 'next/image'
 import AccountBoxIcon from '@mui/icons-material/AccountBox'
 import { fetcher } from '@/utils'
@@ -31,17 +31,10 @@ export function Student() {
   return (
     <div>
       <ul className="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
-        {data?.map((student: StudentModel) => (
+        {data.map((student: StudentTypo) => (
           <li key={student.id}>
             <div className="flex items-center space-x-4">
               <div className="flex-shrink-0">
-                {/* <Image
-                  src="https://static.thenounproject.com/png/2366460-200.png"
-                  alt="no-image"
-                  width={50}
-                  height={50}
-                  style={{ maxWidth: '100%', height: 'auto' }}
-                /> */}
                 <AccountBoxIcon />
               </div>
               <div className="flex-1 min-w-0">

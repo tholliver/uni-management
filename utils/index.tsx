@@ -1,13 +1,13 @@
-import { StudentModel } from '@/app/typos'
+import { StudentTypo } from '@/app/typos'
 
 export async function getStudents(
   username: string
-): Promise<StudentModel[] | undefined> {
+): Promise<StudentTypo[] | undefined> {
   const res = await fetch(`${process.env.API_BASE_URL}/student`)
 
   if (!res.ok) return undefined
 
-  const students: StudentModel[] = await res.json()
+  const students: StudentTypo[] = await res.json()
   return students
 }
 

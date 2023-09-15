@@ -43,9 +43,8 @@ export default function StudentRegistration() {
   //-------------------- states - - - - - -
 
   const setCareer = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const id = event.target.value
+    const id = parseInt(event.target.value, 10)
     console.log(id)
-    event.target.value
     setFormData((prevFormData) => ({
       ...prevFormData,
       careerId: id,
@@ -119,6 +118,7 @@ export default function StudentRegistration() {
     }
 
     setFormData({ ...newStudent })
+    setValidationErrors(null)
     console.log(result)
   }
 
@@ -234,7 +234,7 @@ export default function StudentRegistration() {
               </button>
 
               <label htmlFor="states" className="sr-only">
-                Choose a state
+                Choose a career
               </label>
               {careerList ? (
                 <select
@@ -242,7 +242,7 @@ export default function StudentRegistration() {
                   className="outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-r-lg border-l-gray-100 dark:border-l-gray-700 border-l-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   onChange={setCareer}
                 >
-                  <option defaultValue="true">Choose a state</option>
+                  <option defaultValue="true">Choose a career</option>
                   {careerList.map((c: Career, i) => (
                     <option key={i} value={c.id}>
                       {c.career_name}

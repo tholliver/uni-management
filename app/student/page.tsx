@@ -11,7 +11,7 @@ export default async function Student() {
         </div>
       </div>
       <div className=" m-6 col-span-1 sm:col-span-2/5 ">
-        <h4 className="font-extrabold ">Student Regsitration</h4>
+        <h4 className="font-extrabold ">Student Registration</h4>
         <div className="mt-5">
           <StudentRegistration />
         </div>
