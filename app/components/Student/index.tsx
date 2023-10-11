@@ -1,9 +1,9 @@
 'use client'
 import useSWR from 'swr'
 import { StudentTypo } from '../../typos'
-import Image from 'next/image'
 import AccountBoxIcon from '@mui/icons-material/AccountBox'
 import { fetcher } from '@/utils'
+import { Skeleton } from '../Skeleton'
 
 export function Student() {
   // const studentData = await getStudents('s')
@@ -24,16 +24,18 @@ export function Student() {
   if (isLoading)
     return (
       <>
-        <div>Loading | getting data</div>{' '}
+        <div>
+          <Skeleton numberRows={7} />
+        </div>
       </>
     )
 
   return (
     <div>
-      <ul className="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
+      <ul className="max-w-md divide-y  divide-gray-200 dark:divide-gray-700">
         {data.map((student: StudentTypo) => (
           <li key={student.id}>
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 pt-3">
               <div className="flex-shrink-0">
                 <AccountBoxIcon />
               </div>

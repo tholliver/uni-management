@@ -22,7 +22,7 @@ export default function StudentStatCard() {
               20
             </h5>
             <p className="text-sm font-normal text-gray-500 dark:text-gray-400">
-              Total students
+              Visitos today
             </p>
           </div>
         </div>
@@ -43,7 +43,7 @@ export default function StudentStatCard() {
                 d="M5 13V1m0 0L1 5m4-4 4 4"
               />
             </svg>
-            42.5%
+            -.--
           </span>
         </div>
       </div>

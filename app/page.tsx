@@ -12,11 +12,11 @@ export default function Home() {
   if (isLoading) return <div>Loading...</div>
 
   return (
-    <div className="dark:divide-gray-700">
+    <div className="dark:divide-gray-700  ">
       <div className="flex items-center space-x-8  text-sm ">
         <StudentStatCard />
-        <BaseCard stat={data[0].num_of_careers} />
-        <BaseCard stat={data[0].num_of_students} />
+        <BaseCard stat={data[0].num_of_careers} title="Total careers" />
+        <BaseCard stat={data[0].num_of_students} title="Total students" />
       </div>
     </div>
   )

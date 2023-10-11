@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={inter.className} suppressHydrationWarning={true}>
         <Providers>
           <Navbar />
-          <main className="flex min-h-screen flex-col dark:divide-gray-700 items-center justify-between p-5">
+          <main className="flex min-h-screen dark:bg-gray-700 flex-col dark:divide-gray-700 items-center justify-between p-5">
             {children}
           </main>
         </Providers>

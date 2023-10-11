@@ -1,5 +1,6 @@
 type StatProps = {
   stat: number
+  title: string
 }
 
 export default function BaseCard(statNum: StatProps) {
@@ -10,7 +11,7 @@ export default function BaseCard(statNum: StatProps) {
           {statNum.stat}
         </h5>
         <p className="font-normal text-gray-700 dark:text-gray-400">
-          Total registered
+          {statNum.title}
         </p>
       </div>
     </>
